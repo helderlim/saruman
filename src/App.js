@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route, Link } from "react-router-dom";
+import Feed from "./pages/feed/Feed"
+import Navbar from './components/navbar/Navbar';
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Feed />} />
+        <Route path="about" element={<About />} />
+      </Routes>
     </div>
+  );
+}
+
+function About() {
+  return (
+    <>
+      <main>
+        <h2>Who are we?</h2>
+        <p>
+          That feels like an existential question, don't you
+          think?
+        </p>
+      </main>
+      <nav>
+        <Link to="/">Home</Link>
+      </nav>
+    </>
   );
 }
 
