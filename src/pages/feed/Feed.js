@@ -14,7 +14,7 @@ function Feed() {
     getPost();
   }, [])
   return (
-    <div>
+    <div className='container-feed'>
       <div className="card-list">
         {query ? query.map((pic) =>
           <div className="card" key={pic.id}>
@@ -25,7 +25,7 @@ function Feed() {
               width="50%"
               height="50%"
             ></img>
-          </div>): ''};
+          </div>): ''}
       </div>
     </div>
   );

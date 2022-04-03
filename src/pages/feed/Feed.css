@@ -1,7 +1,9 @@
-.container {
+.container-feed {
   margin: 0 auto;
   max-width: 1000px;
   padding: 40px;
+  background-color: #292929;
+
 }
 .title {
   font-size: 4.4rem;
